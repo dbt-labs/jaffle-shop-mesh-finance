@@ -40,19 +40,3 @@ models:
       - name: order_cost
         data_type: number
         description: The sum of supply expenses to fulfill the order.
-      - name: count_food_items
-        description: The number of individual food items ordered.
-      - name: count_drink_items
-        description: The number of individual drink items ordered.
-      - name: count_items
-        description: The total number of both food and drink items ordered.
-      - name: subtotal_food_items
-        description: The sum of all the food item prices without tax.
-      - name: subtotal_drink_items
-        description: The sum of all the drink item prices without tax.
-      - name: subtotal
-        description: The sum total of both food and drink item prices without tax.
-      - name: location_name
-        description: The full location name of where this order was placed. Denormalized from `stg_locations`.
-      - name: is_first_order
-        description: A boolean indicating if this order is from a new customer placing their first order.
