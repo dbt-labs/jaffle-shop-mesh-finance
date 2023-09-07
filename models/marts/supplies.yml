@@ -1,0 +1,22 @@
+models:
+  - name: supplies
+    description: |
+      Supplies dimension table. The grain of the table is one row per supply and product combination.
+    access: protected
+    group: finance
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: supply_uuid
+        data_type: text
+      - name: supply_id
+        data_type: text
+      - name: product_id
+        data_type: text
+      - name: supply_name
+        data_type: text
+      - name: supply_cost
+        data_type: number
+      - name: is_perishable_supply
+        data_type: boolean

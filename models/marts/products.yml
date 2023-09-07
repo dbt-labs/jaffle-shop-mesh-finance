@@ -1,0 +1,24 @@
+models:
+  - name: products
+    description: |
+      Product dimension table. The grain of the table is one row per product.
+    access: protected
+    group: finance
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: product_id
+        data_type: text
+      - name: product_name
+        data_type: text
+      - name: product_type
+        data_type: text
+      - name: product_description
+        data_type: text
+      - name: product_price
+        data_type: number
+      - name: is_food_item
+        data_type: number
+      - name: is_drink_item
+        data_type: number

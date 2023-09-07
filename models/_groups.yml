@@ -1,0 +1,13 @@
+groups:
+  - name: platform
+    owner:
+      email: jaff.bridges@jaffleshop.com
+      name: Jaff Bridges
+  - name: finance
+    owner:
+      email: zach.jaff@jaffleshop.com
+      name: Zach Jaff
+  - name: marketing
+    owner:
+      email: ben.jaffleck@jaffleshop.com
+      name: Ben Jaffleck

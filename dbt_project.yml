@@ -1,0 +1,29 @@
+name: jaffle_shop_mesh_finance
+config-version: 2
+model-paths:
+  - models
+macro-paths:
+  - macros
+seed-paths:
+  - jaffle-data
+test-paths:
+  - tests
+analysis-paths:
+  - analyses
+target-path: target
+snapshot-paths:
+  - snapshots
+clean-targets:
+  - target
+  - dbt_packages
+profile: snowflake
+require-dbt-version: '>=1.6.0'
+models:
+  jaffle_shop_mesh_finance:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+vars:
+  truncate_timespan_to: '{{ current_timestamp() }}'
+  dbt_date:time_zone: America/Los_Angeles

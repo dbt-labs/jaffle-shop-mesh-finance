@@ -1,0 +1,26 @@
+models:
+  - name: order_items
+    description: |
+      Items contatined in each order. The grain of the table is one row per order item.
+    access: public
+    group: finance
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: order_item_id
+        data_type: text
+      - name: order_id
+        data_type: text
+      - name: product_id
+        data_type: text
+      - name: product_price
+        data_type: number
+      - name: supply_cost
+        data_type: number
+      - name: is_food_item
+        data_type: number
+      - name: is_drink_item
+        data_type: number
+      - name: ordered_at
+        data_type: timestamp_ntz
