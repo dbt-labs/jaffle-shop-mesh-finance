@@ -19,8 +19,8 @@ models:
       - name: supply_cost
         data_type: number
       - name: is_food_item
-        data_type: number
+        data_type: boolean
       - name: is_drink_item
-        data_type: number
+        data_type: boolean
       - name: ordered_at
         data_type: timestamp_ntz
