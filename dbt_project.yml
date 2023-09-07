@@ -17,13 +17,11 @@ clean-targets:
   - target
   - dbt_packages
 profile: snowflake
-require-dbt-version: '>=1.6.0'
+require-dbt-version: ">=1.6.0"
 models:
   jaffle_shop_mesh_finance:
-    staging:
-      +materialized: view
     marts:
       +materialized: table
 vars:
-  truncate_timespan_to: '{{ current_timestamp() }}'
+  truncate_timespan_to: "{{ current_timestamp() }}"
   dbt_date:time_zone: America/Los_Angeles

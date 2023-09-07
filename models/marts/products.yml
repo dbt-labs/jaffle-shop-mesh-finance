@@ -19,6 +19,6 @@ models:
       - name: product_price
         data_type: number
       - name: is_food_item
-        data_type: number
+        data_type: boolean
       - name: is_drink_item
-        data_type: number
+        data_type: boolean
