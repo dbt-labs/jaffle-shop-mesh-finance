@@ -57,6 +57,10 @@ Once your project is set up, use the following steps to get the project ready fo
 2. Run a `dbt build` to build your project.
 3. [Party up](https://www.youtube.com/watch?v=thIVtEOtlWM)!
 
+## Optional
+
+- If you'd like to use [pre-commit](https://pre-commit.com/), run `pre-commit install` in your virtual environment or devcontainer, after the `task install` step.
+
 ---
 
 [^1]: This will install the dbt Cloud CLI [currently in beta] as well as the python packages necessary for running MetricFlow queries, linting your code, and other tasks.
