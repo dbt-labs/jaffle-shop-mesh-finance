@@ -10,7 +10,7 @@ tab_space_size = 4
 
 [sqlfluff:layout:type:comma]
 spacing_before = touch
-line_position = trailing
+line_position = leading
 
 [sqlfluff:rules:capitalisation.keywords] 
 capitalisation_policy = lower
