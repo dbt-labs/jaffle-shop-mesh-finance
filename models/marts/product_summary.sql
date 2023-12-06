@@ -10,4 +10,4 @@ select
         case when
             is_drink_item then 1 end
     ) as number_of_drink_items
-from {{ ref('products', v=2) }}
+from {{ ref('products') }}
