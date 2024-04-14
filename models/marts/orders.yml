@@ -10,7 +10,7 @@ models:
       - name: order_id
         data_type: text
         description: The unique key of the orders mart.
-        tests:
+        data_tests:
           - not_null
           - unique
       - name: location_id
@@ -19,7 +19,7 @@ models:
       - name: customer_id
         data_type: text
         description: The foreign key relating to the customer who placed the order.
-        tests:
+        data_tests:
           - relationships:
               to: ref('stg_customers')
               field: customer_id
