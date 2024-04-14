@@ -10,6 +10,9 @@ models:
     columns:
       - name: product_id
         data_type: text
+        data_tests:
+          - unique
+          - not_null
       - name: product_name
         data_type: text
       - name: product_type

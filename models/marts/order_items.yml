@@ -10,6 +10,9 @@ models:
     columns:
       - name: order_item_id
         data_type: text
+        data_tests:
+          - unique
+          - not_null
       - name: order_id
         data_type: text
       - name: product_id
