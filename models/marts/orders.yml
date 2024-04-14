@@ -40,6 +40,8 @@ models:
       - name: order_cost
         data_type: number(38,2)
         description: The sum of supply expenses to fulfill the order.
+      - name: gross_margin
+        data_type: number(38,2)
 
 unit_tests:
   - name: correctly_count_food_drink_items
