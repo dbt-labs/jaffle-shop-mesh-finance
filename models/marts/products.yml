@@ -31,6 +31,6 @@ models:
       - name: is_perishable
         data_type: boolean
         description: Indicates if any of the supplies for the product are perishable.
-      - name: gross_margin
+      - name: profit_margin
         data_type: number(38,2)
         description: The gross margin ratio of the product, calculated as (product_price - supply_cost) / product_price.

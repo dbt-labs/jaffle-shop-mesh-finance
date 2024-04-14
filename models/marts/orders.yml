@@ -40,7 +40,7 @@ models:
       - name: order_cost
         data_type: number(38,2)
         description: The sum of supply expenses to fulfill the order.
-      - name: gross_margin
+      - name: profit_margin
         data_type: number(38,2)
 
 unit_tests:

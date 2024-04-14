@@ -31,7 +31,7 @@ joined as (
         order_supplies_summary.is_perishable,
         order_supplies_summary.supply_cost,
         (products.product_price - order_supplies_summary.supply_cost)
-        / products.product_price as gross_margin
+        / products.product_price as profit_margin
 
     from order_supplies_summary
     inner join products

@@ -23,7 +23,7 @@ joined as (
         order_items.*,
         products.product_price,
         products.supply_cost,
-        products.gross_margin,
+        products.profit_margin,
         products.is_food_item,
         products.is_drink_item,
         orders.ordered_at

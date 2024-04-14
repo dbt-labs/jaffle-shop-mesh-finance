@@ -21,7 +21,7 @@ models:
         data_type: number(38,2)
       - name: supply_cost
         data_type: number(38,2)
-      - name: gross_margin
+      - name: profit_margin
         data_type: number(38,2)
       - name: is_food_item
         data_type: boolean
