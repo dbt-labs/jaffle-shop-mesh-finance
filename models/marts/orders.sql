@@ -22,7 +22,8 @@ order_items_summary as (
         count(case when is_drink_item then 1 else 0 end)
             as count_drink_items,
 
-        sum(supply_cost) as order_cost
+        sum(supply_cost) as order_cost,
+        sum(product_price - supply_cost) / sum(product_price) as gross_margin
 
     from order_items_table
 
@@ -35,9 +36,10 @@ compute_booleans as (
     select
 
         orders.*,
-        order_items_summary.order_cost,
-        order_items_summary.count_food_items > 0 as is_food_order,
-        order_items_summary.count_drink_items > 0 as is_drink_order
+        coalesce(order_items_summary.order_cost, 0) as order_cost,
+        coalesce(order_items_summary.gross_margin, 0) as gross_margin,
+        coalesce(order_items_summary.count_food_items > 0, 0) as is_food_order,
+        coalesce(order_items_summary.count_drink_items > 0, 0) as is_drink_order
 
     from orders
 
