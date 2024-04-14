@@ -23,7 +23,7 @@ order_items_summary as (
             as count_drink_items,
 
         sum(supply_cost) as order_cost,
-        sum(product_price - supply_cost) / sum(product_price) as gross_margin
+        sum(product_price - supply_cost) / sum(product_price) as profit_margin
 
     from order_items_table
 
@@ -37,7 +37,7 @@ compute_booleans as (
 
         orders.*,
         coalesce(order_items_summary.order_cost, 0) as order_cost,
-        coalesce(order_items_summary.gross_margin, 0) as gross_margin,
+        coalesce(order_items_summary.profit_margin, 0) as profit_margin,
         coalesce(order_items_summary.count_food_items > 0, 0) as is_food_order,
         coalesce(order_items_summary.count_drink_items > 0, 0) as is_drink_order
 
