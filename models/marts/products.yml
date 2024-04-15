@@ -1,7 +1,7 @@
 models:
   - name: products
     description: |
-      Product dimension table. The grain of the table is one row per product.
+      Product dimension table. The grain of the table is one row per product. This model enhances the product information by joining it with supply cost data, determining if any supply is perishable, and calculating the gross margin for each product.
     access: protected
     group: finance
     config:
@@ -10,6 +10,9 @@ models:
     columns:
       - name: product_id
         data_type: text
+        data_tests:
+          - unique
+          - not_null
       - name: product_name
         data_type: text
       - name: product_type
@@ -22,3 +25,12 @@ models:
         data_type: boolean
       - name: is_drink_item
         data_type: boolean
+      - name: supply_cost
+        data_type: number(38,2)
+        description: Total cost of supplies needed for the product.
+      - name: is_perishable
+        data_type: boolean
+        description: Indicates if any of the supplies for the product are perishable.
+      - name: profit_margin
+        data_type: number(38,2)
+        description: The gross margin ratio of the product, calculated as (product_price - supply_cost) / product_price.
