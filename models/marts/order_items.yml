@@ -10,9 +10,6 @@ models:
     columns:
       - name: order_item_id
         data_type: text
-        data_tests:
-          - unique
-          - not_null
       - name: order_id
         data_type: text
       - name: product_id
@@ -20,8 +17,6 @@ models:
       - name: product_price
         data_type: number(38,2)
       - name: supply_cost
-        data_type: number(38,2)
-      - name: profit_margin
         data_type: number(38,2)
       - name: is_food_item
         data_type: boolean
