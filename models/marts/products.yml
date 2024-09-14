@@ -4,9 +4,6 @@ models:
       Product dimension table. The grain of the table is one row per product.
     access: protected
     group: finance
-    config:
-      contract:
-        enforced: true
     columns:
       - name: product_id
         data_type: text

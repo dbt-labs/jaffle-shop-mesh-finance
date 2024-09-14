@@ -1,3 +1,11 @@
+{{ config(
+    materialized='table',
+    table_type='iceberg',
+    format='parquet',
+    
+) }}
+
+
 with
 
 products as (

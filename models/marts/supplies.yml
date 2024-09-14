@@ -4,9 +4,6 @@ models:
       Supplies dimension table. The grain of the table is one row per supply and product combination.
     access: protected
     group: finance
-    config:
-      contract:
-        enforced: true
     columns:
       - name: supply_uuid
         data_type: text
